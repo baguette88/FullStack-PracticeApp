@@ -27,7 +27,7 @@ export default class NewForm extends Component {
     })
       .then((res) => res.json())
       .then((data) => {
-        this.props.handleAddHoliday(data);
+        this.props.handleAddBookmark(data);
         this.setState({
           name: "",
         });
@@ -44,9 +44,9 @@ export default class NewForm extends Component {
           name="name"
           onChange={this.handleChange}
           value={this.state.name}
-          placeHolder="add a holiday"
+          placeHolder="add a Bookmark"
         />
-        <input type="submit" value="Add Holiday" />
+        <input type="submit" value="Add Bookmark" />
       </form>
     );
   }
